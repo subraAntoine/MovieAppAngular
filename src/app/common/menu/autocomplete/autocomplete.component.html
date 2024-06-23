@@ -1,0 +1,15 @@
+<input
+  type="text"
+  [(ngModel)]="query"
+  (keyup)="onKeyUp()"
+  (focus)="handleDisplay()"
+/>
+@if(movie.length && displayResults){
+<ul class="fade-in">
+  @for(movie of movie; track movie.id){
+  <a (click)="displayOff()" [routerLink]="movie.detailRoute">
+    <li>{{ movie.title }}</li>
+  </a>
+  }
+</ul>
+}

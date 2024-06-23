@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+  border-bottom: solid 2px rgb(226, 226, 226);
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+
+  transition: 0.2s ease-in-out all;
+  position: relative;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 10px;
+  background-color: black;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  transition: 0.3s ease-in-out all;
+}
+
+a:hover::before {
+  width: 100%;
+}

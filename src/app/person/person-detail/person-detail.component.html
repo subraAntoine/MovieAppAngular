@@ -1,0 +1,11 @@
+<div class="person-detail-cont">
+  <img [src]="person.profile" alt="" />
+  <h2>{{ person.name }}</h2>
+  <p>{{ person.biography }}</p>
+  <p>Birthday : {{ person.birthday | date : "shortDate" }}</p>
+  @if(person.deathday){
+
+  <p>Deathday : {{ person.deathday | date : "shortDate" }}</p>
+  }
+  <p>Place of birth : {{ person.place_of_birth }}</p>
+</div>

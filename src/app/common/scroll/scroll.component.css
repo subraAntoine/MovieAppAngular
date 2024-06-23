@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  overflow-x: scroll;
+
+  display: flex;
+  gap: 20px;
+  padding: 20px 20px;
+}

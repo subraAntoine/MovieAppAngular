@@ -1,0 +1,27 @@
+:host {
+  box-shadow: 4px 4px 10px 4px rgb(213, 213, 213);
+  margin: 20px;
+  border-radius: 10px;
+  min-width: 300px;
+  max-width: 300px;
+  transition: 0.3s ease-in-out all;
+}
+
+.popular-film-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+:host:hover {
+  transform: scale(1.05);
+}
+img {
+  border-radius: 5px;
+}
+
+h2 {
+  text-align: center;
+}

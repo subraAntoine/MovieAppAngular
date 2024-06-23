@@ -1,0 +1,8 @@
+<div class="movie-container">
+  @if (movie){
+  <imdb-movie-detail [movie]="movie"></imdb-movie-detail>
+  }
+</div>
+@if(credits){
+<imdb-movie-credits [credits]="credits"></imdb-movie-credits>
+}

@@ -1,0 +1,65 @@
+:host {
+  position: relative;
+}
+
+input {
+  width: 400px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+ul {
+  position: absolute;
+  list-style: none;
+  background-color: white;
+  border: solid rgb(190, 190, 190) 1px;
+  max-height: 300px;
+  overflow-y: scroll;
+  width: 100%;
+  z-index: 1;
+  border-radius: 0 0 10px 10px;
+}
+
+li {
+  padding: 10px 2px;
+  border-bottom: solid 1px rgb(204, 204, 204);
+  position: relative;
+  z-index: 3;
+  padding-left: 40px;
+}
+
+li::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 30px;
+  background-color: aquamarine;
+  z-index: -1;
+  transition: 0.5s ease-in-out all;
+}
+
+li:hover::before {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.fade-in {
+  animation: fadeAnimation 0.5s ease-in-out;
+}
+
+@keyframes fadeAnimation {
+  0% {
+    height: 0%;
+  }
+  100% {
+    opacity: 1;
+    height: 300px;
+  }
+}

@@ -1,0 +1,16 @@
+.person-detail-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 80vw;
+  margin-top: 100px;
+  box-shadow: 4px 4px 4px 2px rgb(213, 213, 213);
+  border: solid 1px #d5d5d5;
+  border-radius: 10px;
+  gap: 20px;
+}
+
+img {
+  border-radius: 5px;
+}

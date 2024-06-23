@@ -1,0 +1,14 @@
+<h1>Detail de la personne</h1>
+@if (person){
+<imdb-person-detail
+  class="person-detail"
+  [person]="person"
+></imdb-person-detail>
+} @if(movies){
+<h2>Films</h2>
+<div class="movie-cont">
+  @for(movie of movies; track movie.id){
+  <imdb-movie-poster [movie]="movie"></imdb-movie-poster>
+  }
+</div>
+}

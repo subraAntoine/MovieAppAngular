@@ -1,0 +1,12 @@
+<h2>{{ movie.title }}</h2>
+<img [src]="movie.poster" alt="" />
+<p>{{ movie.overview }}</p>
+<div class="genre-container">
+  @for (genre of movie.genres; track genre.id ){
+  <p class="genre-item">{{ genre.name }}</p>
+  }
+</div>
+<p>Budget : {{ movie.budget | currency : "USD" : "symbol" }}</p>
+<p>Date de sortie : {{ movie.release_date | date : "shortDate" }}</p>
+<p>Note moyenne : {{ movie.vote_average }}/10</p>
+<p>Nombre de note : {{ movie.vote_count }}</p>

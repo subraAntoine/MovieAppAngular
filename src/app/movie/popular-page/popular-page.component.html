@@ -1,0 +1,8 @@
+<div class="title-cont">
+  <h1>Films populaire</h1>
+</div>
+<div class="movies-container">
+  @for (movie of movies; track movie.id) {
+  <imdb-movie-poster [movie]="movie" />
+  }
+</div>

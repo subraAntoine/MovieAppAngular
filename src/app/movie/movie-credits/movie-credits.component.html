@@ -1,0 +1,33 @@
+<div class="cont">
+  <h2>Cast</h2>
+  <div class="card-list">
+    <imdb-scroll>
+      @for(cast of credits.cast; track $index){
+      <a routerLink="/person/{{ cast.id }}" class="credits-card">
+        <img [src]="cast.profile" alt="" />
+        <div class="credit-data">
+          <p>{{ cast.name }}</p>
+          <p>Personnage : {{ cast.character }}</p>
+        </div>
+      </a>
+      }
+    </imdb-scroll>
+  </div>
+</div>
+
+<div class="cont">
+  <h2>Crew</h2>
+  <div class="card-list">
+    <imdb-scroll>
+      @for( crew of credits.crew; track $index ){
+      <a routerLink="/person/{{ crew.id }}" class="credits-card">
+        <img [src]="crew.profile" alt="" />
+        <div class="credit-data">
+          <p>{{ crew.name }}</p>
+          <p>Job : {{ crew.job }}</p>
+        </div>
+      </a>
+      }
+    </imdb-scroll>
+  </div>
+</div>
